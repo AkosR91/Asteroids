@@ -1,8 +1,8 @@
 import pygame # type: ignore
-import circleshape
+from circleshape import CircleShape
 import constants
 
-class player(circleshape):
+class Player(CircleShape):
     def __init__(self, x, y):
         super().__init__(x, y, constants.PLAYER_RADIUS)
         self.color = (255, 255, 255)  # White color
