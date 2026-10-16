@@ -1,14 +1,14 @@
 import pygame  # pyright: ignore[reportMissingImports]
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
-from player import Player
+import player #type: ignore
 
 def main():
     print(f"Starting Asteroids with pygame version: {pygame.version.ver}")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
     pygame.init()
-    gamer = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)  # Create a player instance at the center of the screen
+    gamer = player.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)  # Create a player instance at the center of the screen
     clock = pygame.time.Clock()  # Initialize the clock
     dt = 0.0
     
